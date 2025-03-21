@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/community.css' %}">
+    <link rel="stylesheet" href="{% static 'css/newsletter.css' %}">
+    <link rel="stylesheet" href="{% static 'css/partner.css' %}">
+    <link rel="stylesheet" href="{% static 'css/volunteer.css' %}">
+    <title>SheInternet Data Sponsporship Programme</title>
+</head>
+
+<body>
+    <header>
+        <div class="header header-container">
+            <h3 class="logo">She<span class="text-purple">Internet</span></h3>
+            <nav class="nav-destop">
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}" class="{% if request.path == '/' %}active-purple{% endif %}">Home</a></li>
+                    <li><a href="{% url 'about' %}" class="{% if request.path == '/about/' %}active-purple{% endif %}">About</li>
+                    <li class="dropdown">
+                        <a href="{% url 'program' %}" class="{% if request.path == '/program/' %}active-purple{% endif %}">Our Programs<i class="fas fa-caret-down dropdown-icon"></i></a>
+                        <div class="dropdown-content">
+                            <a href="{% url 'program' %}">Data Support</a>
+                        </div>
+                    </li>
+                    <li><a href="{% url 'involved' %}" class="{% if request.path == '/involved/' %}active-purple{% endif %}">Get Involved</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <i class="fas fa-bars open-menu"></i>
+                <i class="fas fa-times close-menu"></i>
+            </div>
+
+            <!--nav-mobile-->
+            <nav class="nav-mobile">
+                <ul class="nav-links-mobile">
+                    <li><a href="{% url 'home' %}" class="{% if request.path == '/' %}active-purple{% endif %}">Home</a></li>
+                    <li><a href="{% url 'about' %}" class="{% if request.path == '/about/' %}active-purple{% endif %}">About Us</a></li>
+                    <li class="dropdown-mobile">
+                        <a href="{% url 'program' %}" class="{% if request.path == '/program/' %}active-purple{% endif %}">Our Programs<i class="fas fa-caret-down dropdown-icon-mobile"></i></a>
+                        <div class="dropdown-content-mobile">
+                            <a href="{% url 'program' %}">Data Support</a>
+                        </div>
+                    </li>
+                    <li><a href="{% url 'involved' %}" class="{% if request.path == '/involved/' %}active-purple{% endif %}">Get Involved</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    
+    {% block content %}
+        
+    {% endblock content %}
+
+
+
+    <!--footer Join us in bridging the gap For African women-->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>She<span class="text-orange">Internet</span></h3>
+                <p>We equip African women to lead and drive change with internet access, digital tools and training.
+                    whether you're an aspiring leader, running a non-profit, leading a community project, or developing
+                    a new
+                    solution, we provide the resources you need to amplify your impact</p>
+                <button class="donate-footer-button"><a href="https://forms.gle/VFi8Ri8EuN1fcRFb6"
+                        target="_blank">Donate</a></button>
+            </div>
+            <div class="footer-section explore">
+                <h3 class="text-orange">Explore</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'about' %}">Our Program</a></li>
+                    <li><a href="{% url 'involved' %}">Get Involved</a></li>
+                    <div>
+                        <button type="submit" class="explore-btn" onclick="openJoinForm()">Join Our
+                            Network</button>
+                    </div>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3 class="text-orange">Contact</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>Call Anytime on +2349025836527 or +2349050862775</p>
+                </div>
+
+                <div class="contact-item">
+                    <a href="https://www.facebook.com/sheinternet" target="_blank">
+                        <i class="fab fa-facebook fa-1x"></i>
+                        <p>Follow us on Facebook</p>
+                    </a>
+                </div>
+                
+                <div class="contact-item">
+                    <a href="https://www.instagram.com/sheinternet?igsh=NmpjMGszcHVyc2Jm&utm_source=qr" target="_blank">
+                        <i class="fab fa-instagram fa-1x"></i>
+                        <p>Follow our Instagram handle</p>
+                    </a>
+                </div>
+                
+                <div class="contact-item">
+                    <a href="https://www.linkedin.com/company/sheinternet" target="_blank">
+                        <i class="fab fa-linkedin fa-1x"></i>
+                        <p>Follow our LinkedIn page</p>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <p>We're on a mission to empower African women with internet access and tools they need to lead,
+                    advocate,
+                    and innovate. Every visit, share, and action taken brings us one step closer to transforming lives
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+    <script src="{% static 'newsletter.js' %}"></script>
+    <script src="{% static 'community.js' %}"></script>
+    <script src="{% static 'volunteer.js' %}"></script>
+    <script src="{% static 'partner.js' %}"></script>
+</body>
+
+</html>
+        
