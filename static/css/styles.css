@@ -616,7 +616,7 @@ header .nav-mobile .nav-links-mobile .active-purple {
 
 /* Footer */
 .footer {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('../img//footer.jpg') no-repeat center center/cover;
+    
     color: #fff;
     padding: 50px 20px;
     margin-top: 40px;
