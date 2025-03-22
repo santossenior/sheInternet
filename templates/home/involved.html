@@ -60,54 +60,46 @@
                 <span class="close-btn times" onclick="closeForm()">&times;</span>
                 <h2 class="text-purple">Sign Up to Volunteer</h2>
             </div>
+    
             <form method="post" action="" id="volunteer-form">
                 <div id="volunteer-message" style="display: none;"></div>
                 {% csrf_token %}
                 <label for="name">Name:</label>
                 <input type="text" id="lname" name="name" placeholder="Full Name" required>
-
+    
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="lphone" name="phone" required>
-
+    
                 <label for="email">Email:</label>
                 <input type="email" id="lemail" name="email" required>
-
+    
                 <!--Contribution Type-->
                 <div class="form-group">
                     <label>How Would you like to contribute <span class="required">*</span></label>
                     <div class="radio-group">
-                        <label><input type="radio" id="mentoring" name="contribution" value="Mentoring women">Mentoring
-                            women</label>
-                        <label><input type="radio" id="marketing" name="contribution"
-                                value="Supporting Programs">Supporting Programs</label>
-                        <label><input type="radio" id="marketing" name="contribution"
-                                value="Marketing">Marketing</label>
-                        <label> <input type="radio" id="training" name="contribution" value="Hosting Training">Hosting
-                            Training</label>
-                        <label> <input type="radio" id="consultation" name="contribution"
-                                value="Provide one-time consultations">Provide one-time consultations</label>
-                        <label><input type="radio" id="other-text" name="contribution" value="other">Other: <input
-                                type="text" name="contribution"></label>
+                        <label><input type="radio" id="mentoring" name="contribution" value="Mentoring women">Mentoring women</label>
+                        <label><input type="radio" id="marketing" name="contribution" value="Supporting Programs">Supporting Programs</label>
+                        <label><input type="radio" id="marketing" name="contribution" value="Marketing">Marketing</label>
+                        <label><input type="radio" id="training" name="contribution" value="Hosting Training">Hosting Training</label>
+                        <label><input type="radio" id="consultation" name="contribution" value="Provide one-time consultations">Provide one-time consultations</label>
+                        <label><input type="radio" id="other-text" name="contribution" value="other">Other: <input type="text" name="contribution"></label>
                     </div>
                 </div>
-
+    
                 <!--Commitment Time-->
                 <div class="form-group">
                     <label>How much time can you commit? <span class="required">*</span></label>
                     <div class="radio-group">
-                        <label><input type="radio" name="time_commitment" value="A few hours per month">A few hours per
-                            month</label>
-                        <label><input type="radio" name="time_commitment" value="Weekly commitment">Weekly
-                            commitment</label>
-                        <label> <input type="radio" name="time_commitment"
-                                value="one-time/short-term support">one-time/short-term support</label>
+                        <label><input type="radio" name="time_commitment" value="A few hours per month">A few hours per month</label>
+                        <label><input type="radio" name="time_commitment" value="Weekly commitment">Weekly commitment</label>
+                        <label><input type="radio" name="time_commitment" value="one-time/short-term support">one-time/short-term support</label>
                     </div>
                 </div>
-
+    
                 <!--Message-->
                 <label for="message">Kindly tell us why you want to volunteer with us (optional)</label>
                 <textarea name="message" id="message" rows="4"></textarea>
-
+    
                 <button type="submit" class="submit-btn">Submit</button>
             </form>
         </div>

@@ -1,5 +1,19 @@
+const CommunityForm = document.getElementById('joinForm');
+console.log("This is the community", CommunityForm);
+
+// Function to close the form
+function closeJoinForm() {
+    console.log('closeJoinForm() called'); // Debugging
+    if (CommunityForm) {
+        CommunityForm.style.display = 'none'; // Hide the form container
+    } else {
+        console.error('Form container not found!'); // Debugging
+    }
+}
+
+// Form submission handler
 document.getElementById('sheinternet-form').addEventListener('submit', function (event) {
-    event.preventDefault();  // Prevent default form submission
+    event.preventDefault(); // Prevent default form submission
 
     // Get form data
     const formData = {
@@ -11,13 +25,13 @@ document.getElementById('sheinternet-form').addEventListener('submit', function 
         about: document.querySelector('input[name="about"]:checked')?.value || '',
     };
 
-    console.log("Form Data:", formData);  // Debugging
+    console.log("Form Data:", formData); // Debugging
 
     // Get CSRF token
     const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
     // Send data via AJAX
-    fetch('/submit-form/', {  // Replace with your Django URL
+    fetch('/submit-form/', { // Replace with your Django URL
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -46,8 +60,11 @@ document.getElementById('sheinternet-form').addEventListener('submit', function 
             `;
         }
 
-        // Clear form fields
-        document.getElementById('sheinternet-form').reset();
+        // Clear form fields and close the form after 3 seconds
+        setTimeout(() => {
+            document.getElementById('sheinternet-form').reset(); // Reset form fields
+            closeJoinForm(); // Close the form
+        }, 3000); // 3000 milliseconds = 3 seconds
     })
     .catch(error => {
         console.error('Error:', error);

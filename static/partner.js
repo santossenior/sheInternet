@@ -1,5 +1,16 @@
+const partnerForm = document.getElementById('partnerForm');
+
+function closeForm() {
+    console.log('closeForm() called'); // Debugging
+    if (partnerForm) {
+        partnerForm.style.display = 'none'; // Hide the form container
+    } else {
+        console.error('Form container not found!'); // Debugging
+    }
+}
+
 document.querySelector('.partner_form').addEventListener('submit', function (event) {
-    event.preventDefault();  // Prevent default form submission
+    event.preventDefault(); // Prevent default form submission
 
     // Get form data
     const formData = {
@@ -9,13 +20,13 @@ document.querySelector('.partner_form').addEventListener('submit', function (eve
         message: document.getElementById('pmessage').value,
     };
 
-    console.log("Form Data:", formData);  // Debugging
+    console.log("Form Data:", formData); // Debugging
 
     // Get CSRF token
     const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
     // Send data via AJAX
-    fetch('/submit-partner-form/', {  // Replace with your Django URL
+    fetch('/submit-partner-form/', { // Replace with your Django URL
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -44,8 +55,11 @@ document.querySelector('.partner_form').addEventListener('submit', function (eve
             `;
         }
 
-        // Clear form fields
-        document.getElementById('partnerFormFields').reset();
+        // Clear form fields and close the form after 3 seconds
+        setTimeout(() => {
+            document.getElementById('partnerFormFields').reset(); // Reset form fields
+            closeForm(); // Close the form
+        }, 2000); // 3000 milliseconds = 3 seconds
     })
     .catch(error => {
         console.error('Error:', error);

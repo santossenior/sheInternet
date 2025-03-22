@@ -1,5 +1,17 @@
+const volunteerForm = document.getElementById('volunteerForm');
+
+function closeForm() {
+    console.log('closeForm() called'); // Debugging
+    if (volunteerForm) {
+        volunteerForm.style.display = 'none'; // Hide the form container
+    } else {
+        console.error('Form container not found!'); // Debugging
+    }
+}
+
+// Form submission handler
 document.getElementById('volunteer-form').addEventListener('submit', function (event) {
-    event.preventDefault();  // Prevent default form submission
+    event.preventDefault(); // Prevent default form submission
 
     // Get form data
     const formData = {
@@ -11,13 +23,13 @@ document.getElementById('volunteer-form').addEventListener('submit', function (e
         message: document.getElementById('message').value,
     };
 
-    console.log("Form Data:", formData);  // Debugging
+    console.log("Form Data:", formData); // Debugging
 
     // Get CSRF token
     const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
     // Send data via AJAX
-    fetch('/submit-volunteer-form/', {  // Replace with your Django URL
+    fetch('/submit-volunteer-form/', { // Replace with your Django URL
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -46,8 +58,10 @@ document.getElementById('volunteer-form').addEventListener('submit', function (e
             `;
         }
 
-        // Clear form fields
-        document.getElementById('volunteer-form').reset();
+        // Close the form after 3 seconds
+        setTimeout(() => {
+            closeForm();
+        }, 4000); // 3000 milliseconds = 3 seconds
     })
     .catch(error => {
         console.error('Error:', error);
