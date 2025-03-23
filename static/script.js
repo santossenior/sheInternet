@@ -100,3 +100,5 @@ window.addEventListener('click', (event) => {
         document.getElementById('joinForm').style.display = 'none';
     }
 })
+
+

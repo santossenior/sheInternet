@@ -64,7 +64,14 @@ document.getElementById('sheinternet-form').addEventListener('submit', function 
         setTimeout(() => {
             document.getElementById('sheinternet-form').reset(); // Reset form fields
             closeJoinForm(); // Close the form
+            
         }, 3000); // 3000 milliseconds = 3 seconds
+
+        setTimeout(() => {
+            // Close the form
+            messageDiv.style.display = 'none';
+        }, 5000); 
+        
     })
     .catch(error => {
         console.error('Error:', error);

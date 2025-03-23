@@ -1,13 +1,17 @@
-let partnerForm = document.getElementById('volunteerForm');
+const volunteer = document.getElementById('volunteerForm');
+console.log("This is the Volunteer", volunteer);
 
+// Function to close the form
 function closeForm() {
     console.log('closeForm() called'); // Debugging
-    if (partnerForm) {
-        partnerForm.style.display = 'none'; // Hide the form container
+    if (volunteer) {
+        console.log("Yes it is working")
+        volunteer.style.display = 'none'; // Hide the form container
     } else {
         console.error('Form container not found!'); // Debugging
     }
 }
+
 
 
 
@@ -62,10 +66,15 @@ document.getElementById('volunteer-form').addEventListener('submit', function (e
         // Clear form fields
         setTimeout(() => {
             document.getElementById('volunteer-form').reset(); // Reset form fields
-            closeForm(); // Close the form
-        }, 2000);
-        
+            closeForm();
+            
 
+        }, 3000); // 3000 milliseconds = 3 seconds
+        setTimeout(() => {
+            messageDiv.style.display = 'none';
+
+        }, 5000);
+       
     })
     .catch(error => {
         console.error('Error:', error);

@@ -35,7 +35,12 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
         }
 
         messageDiv.style.display = 'block';  // Make the message visible
-        document.getElementById('newsletter-form').reset();  // Reset the form
+        setTimeout(() => {
+            document.getElementById('newsletter-form').reset();
+            messageDiv.style.display = 'none';
+        }, 3000);
+        
+        setTimeout()  // Reset the form
     })
     .catch(error => {
         console.error('Error:', error);
