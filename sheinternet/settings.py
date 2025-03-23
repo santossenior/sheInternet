@@ -98,16 +98,16 @@ WSGI_APPLICATION = 'sheinternet.wsgi.application'
 
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'internet',
-        'USER': 'postgres',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-        'PASSWORD': '1232478847'
-    }
-}
+#DATABASES = {
+    #'default': {
+        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #'NAME': 'internet',
+        #'USER': 'postgres',
+        #'HOST': '127.0.0.1',
+        #'PORT': '5432',
+        #'PASSWORD': '1232478847'
+    #}
+#}
 
 
 AUTH_USER_MODEL = 'users.User'
@@ -132,9 +132,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-#DATABASES = {
-    #"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
-#}
+DATABASES = {
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
 
 
 # Internationalization
