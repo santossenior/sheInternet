@@ -5,15 +5,12 @@ console.log("This is the Volunteer", volunteer);
 function closeForm() {
     console.log('closeForm() called'); // Debugging
     if (volunteer) {
-        console.log("Yes it is working")
+        console.log("Yes it is working");
         volunteer.style.display = 'none'; // Hide the form container
     } else {
         console.error('Form container not found!'); // Debugging
     }
 }
-
-
-
 
 document.getElementById('volunteer-form').addEventListener('submit', function (event) {
     event.preventDefault();  // Prevent default form submission
@@ -63,18 +60,14 @@ document.getElementById('volunteer-form').addEventListener('submit', function (e
             `;
         }
 
-        // Clear form fields
-        setTimeout(() => {
-            document.getElementById('volunteer-form').reset(); // Reset form fields
-            closeForm();
-            
+        // Clear form fields and close the form immediately
+        document.getElementById('volunteer-form').reset(); // Reset form fields
+        closeForm(); // Close the form
 
-        }, 3000); // 3000 milliseconds = 3 seconds
+        // Hide the message after 7 seconds
         setTimeout(() => {
             messageDiv.style.display = 'none';
-
-        }, 7000);
-       
+        }, 7000); // Hide after 7 seconds
     })
     .catch(error => {
         console.error('Error:', error);

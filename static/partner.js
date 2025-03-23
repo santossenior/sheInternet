@@ -1,4 +1,4 @@
-const partnerFormElement = document.getElementById('partnerForm'); 
+const partnerFormElement = document.getElementById('partnerForm');
 
 function closePartnerForm() {
     console.log('closeForm() called'); // Debugging
@@ -55,15 +55,14 @@ document.querySelector('.partner_form').addEventListener('submit', function (eve
             `;
         }
 
-        // Clear form fields and close the form after 3 seconds
-        setTimeout(() => {
-            document.getElementById('partnerFormFields').reset(); // Reset form fields
-            closePartnerForm(); // Close the form
-            
-        }, 3000); // 3000 milliseconds = 3 seconds
+        // Clear form fields and close the form immediately
+        document.getElementById('partnerFormFields').reset(); // Reset form fields
+        closePartnerForm(); // Close the form
+
+        // Hide the message after 7 seconds
         setTimeout(() => {
             messageDiv.style.display = 'none';
-        }, 7000);
+        }, 7000); // Hide after 7 seconds
     })
     .catch(error => {
         console.error('Error:', error);

@@ -60,18 +60,14 @@ document.getElementById('sheinternet-form').addEventListener('submit', function 
             `;
         }
 
-        // Clear form fields and close the form after 3 seconds
-        setTimeout(() => {
-            document.getElementById('sheinternet-form').reset(); // Reset form fields
-            closeJoinForm(); // Close the form
-            
-        }, 3000); // 3000 milliseconds = 3 seconds
+        // Clear form fields and close the form immediately
+        document.getElementById('sheinternet-form').reset(); // Reset form fields
+        closeJoinForm(); // Close the form
 
+        // Hide the message after 7 seconds
         setTimeout(() => {
-            // Close the form
             messageDiv.style.display = 'none';
-        }, 7000); 
-        
+        }, 7000); // Hide after 7 seconds
     })
     .catch(error => {
         console.error('Error:', error);
