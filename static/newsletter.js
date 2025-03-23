@@ -40,7 +40,7 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
             messageDiv.style.display = 'none';
         }, 3000);
         
-        setTimeout()  // Reset the form
+       
     })
     .catch(error => {
         console.error('Error:', error);

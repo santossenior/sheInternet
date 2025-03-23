@@ -9,7 +9,7 @@
     margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 8px;
-    position: relative;
+    position: fixed;
     font-size: 16px;
     display: flex;
     align-items: center;

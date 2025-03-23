@@ -70,7 +70,7 @@ document.getElementById('sheinternet-form').addEventListener('submit', function 
         setTimeout(() => {
             // Close the form
             messageDiv.style.display = 'none';
-        }, 5000); 
+        }, 7000); 
         
     })
     .catch(error => {

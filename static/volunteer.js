@@ -73,7 +73,7 @@ document.getElementById('volunteer-form').addEventListener('submit', function (e
         setTimeout(() => {
             messageDiv.style.display = 'none';
 
-        }, 5000);
+        }, 7000);
        
     })
     .catch(error => {

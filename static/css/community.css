@@ -9,8 +9,9 @@
     margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 8px;
-    position: relative;
+    position: fixed;
     font-size: 16px;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;

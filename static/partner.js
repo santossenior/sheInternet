@@ -63,7 +63,7 @@ document.querySelector('.partner_form').addEventListener('submit', function (eve
         }, 3000); // 3000 milliseconds = 3 seconds
         setTimeout(() => {
             messageDiv.style.display = 'none';
-        }, 5000);
+        }, 7000);
     })
     .catch(error => {
         console.error('Error:', error);
