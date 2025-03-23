@@ -1,6 +1,7 @@
 /* Container for the message */
 #volunteer-message {
     margin: 20px 0;
+    display: none; /* Initially hidden */
 }
 
 /* Base alert style */
@@ -9,12 +10,16 @@
     margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 8px;
-    position: fixed;
+    position: fixed; /* Make it fixed */
+    top: 20px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it's above other content */
 }
 
 /* Success alert */
