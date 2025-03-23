@@ -1,10 +1,9 @@
-/* Debugging styles */
+/* Container for the message */
 #volunteer-message {
     margin: 20px 0;
-    background-color: yellow; /* Temporary background for debugging */
-    border: 2px solid red; /* Temporary border for debugging */
 }
 
+/* Base alert style */
 .volunteer-alert {
     padding: 15px;
     margin-bottom: 20px;
@@ -16,21 +15,23 @@
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: pink; /* Temporary background for debugging */
 }
 
+/* Success alert */
 .volunteer-alert-success {
     background-color: #e3f2fd; /* Light blue */
     border-color: #bbdefb;
     color: #1565c0; /* Dark blue */
 }
 
+/* Error alert */
 .volunteer-alert-error {
     background-color: #ffebee; /* Light red */
     border-color: #ffcdd2;
     color: #c62828; /* Dark red */
 }
 
+/* Close button */
 .volunteer-close {
     background: none;
     border: none;

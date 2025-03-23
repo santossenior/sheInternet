@@ -1,9 +1,9 @@
-
+const partnerFormElement = document.getElementById('partnerForm'); 
 
 function closeForm() {
     console.log('closeForm() called'); // Debugging
-    if (partnerForm) {
-        partnerForm.style.display = 'none'; // Hide the form container
+    if (partnerFormElement) {
+        partnerFormElement.style.display = 'none'; // Hide the form container
     } else {
         console.error('Form container not found!'); // Debugging
     }
@@ -59,7 +59,7 @@ document.querySelector('.partner_form').addEventListener('submit', function (eve
         setTimeout(() => {
             document.getElementById('partnerFormFields').reset(); // Reset form fields
             closeForm(); // Close the form
-        }, 2000); // 2000 milliseconds = 2 seconds
+        }, 2000); // 3000 milliseconds = 3 seconds
     })
     .catch(error => {
         console.error('Error:', error);

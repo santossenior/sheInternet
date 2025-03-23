@@ -1,4 +1,4 @@
-const partnerForm = document.getElementById('volunteerForm');
+let partnerForm = document.getElementById('volunteerForm');
 
 function closeForm() {
     console.log('closeForm() called'); // Debugging
