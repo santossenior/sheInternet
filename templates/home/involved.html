@@ -8,6 +8,7 @@
 
     
     <!--Get Invoved-->
+    <div id="partner-message" style="display: none;"></div>
     <div class="container">
         <div class="involved-flex">
             <div class="get-involved-container">
@@ -37,7 +38,7 @@
             <span class="close-btn"><i class="fas fa-times"></i></span>
             <h2 class="text-purple">Partner With Us</h2>
             <form method="post" class="partner_form" action="" id="partnerFormFields">
-                <div id="partner-message" style="display: none;"></div>
+               
                 {% csrf_token %}
                 <label for="name">Name:</label>
                 <input type="text" id="pname" name="pname" placeholder="Full Name" required>
@@ -54,6 +55,7 @@
 
 
     <!---Volunteer Form-->
+    <div id="volunteer-message" style="display: none;"></div>
     <div class="form-popup" id="volunteerForm">
         <div class="form-container">
             <div class="flex-close">
@@ -62,7 +64,7 @@
             </div>
     
             <form method="post" action="" id="volunteer-form">
-                <div id="volunteer-message" style="display: none;"></div>
+                
                 {% csrf_token %}
                 <label for="name">Name:</label>
                 <input type="text" id="lname" name="name" placeholder="Full Name" required>
@@ -120,6 +122,7 @@
             </div>
 
             <!--Join Our Community-->
+            <div id="sheinternet-message" class="sheinternet-message" style="display: none;"></div>
             <div class="community-container">
                 <div class="community-section">
                     <h3 class="text-purple">Join Our Community</h3>
@@ -133,6 +136,7 @@
     </div>
 
     <!--Join Our Community Form-->
+    
     <div class="joinform-popup" id="joinForm">
         <div class="form-container">
             <div class="flex-close">
@@ -140,7 +144,7 @@
                 <h2 class="text-purple">Joins Our Community</h2>
             </div>
             <form id="sheinternet-form" class="sheinternet-form" method="POST">
-                <div id="sheinternet-message" class="sheinternet-message" style="display: none;"></div>
+                
                 {% csrf_token %}
                 <label for="name">Full Name:</label>
                 <input type="text" id="fname" name="name" placeholder="Full Name" required>
