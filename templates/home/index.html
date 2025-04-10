@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 
+{% load static %}
+
 
 
 {% block content %}
@@ -127,6 +129,21 @@
                 <button id="openFormBtn">Become a Partner</button>
                 </p>
             </div>
+        </div>
+    </div>
+    <!--2025 Data support-->
+    <div class="data-support">
+        <div class="program-section">
+            <div class="program-image">
+                <img src="{% static 'img/data.jpg' %}" alt="">
+            </div>
+            <div class="program-details">
+                <p>Our 2025 data support application is still ongoing, and application closes very soon. Internet costs
+                    should not be an obstacle to making an impact, and that's why we are providing women changemakers
+                    with the internet to lead, learn and make impact.</p>
+                <button class="apply-button"><a href="{% url 'program' %}">Apply Now</a></button>
+            </div>
+
         </div>
     </div>
 
