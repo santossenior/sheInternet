@@ -1,0 +1,53 @@
+/* Container for the message */
+#partner-message {
+    margin: 20px 0;
+    display: none; /* Initially hidden */
+}
+
+/* Base alert style */
+.partner-alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    position: fixed; /* Make it fixed */
+    top: 20px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Success alert */
+.partner-alert-success {
+    background-color: #e8f5e9; /* Light green */
+    border-color: #c8e6c9;
+    color: #2e7d32; /* Dark green */
+}
+
+/* Error alert */
+.partner-alert-error {
+    background-color: #ffebee; /* Light red */
+    border-color: #ffcdd2;
+    color: #c62828; /* Dark red */
+}
+
+/* Close button */
+.partner-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.partner-close:hover {
+    opacity: 1;
+}

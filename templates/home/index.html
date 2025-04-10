@@ -1,0 +1,307 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+    
+
+    
+    <!--Hero-->
+    <section class="hero">
+        <div id="sheinternet-message" class="sheinternet-message" style="display: none;"></div>
+       
+        
+        <div class="container hero-flex">
+            <h1>Empowering Women, increasing Impact and Advancing Africa</h1>
+            <div>
+                <p>We equip African women to lead and drive change with internet access, digital tools and training.
+                    whether you're an aspiring leader, running a non-profit, leading a community project, or developing
+                    a new
+                    solution, we provide the resources you need to amplify your impact</p>
+                <div class="btn-flex">
+                    <button href="{% url 'about' %}" class="btn btn-outline" onclick="openJoinForm()">Join Our
+                        Community</button>
+                    <a href="{% url 'about' %}" class="btn btn-outline story">Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--About Us-->
+    <div class="about-section">
+        <div class="join-flex">
+            <div class="section-divider"></div>
+            <h3 class="text-purple">About Us</h3>
+        </div>
+        <p>Our mission is to empower African women with access to the internet and transformational
+            Knowledge that fuels their personal growth, equipping them with the skill confidence, and resources to lead,
+            advocate and innovate.</p>
+    </div>
+
+    <!--Program-->
+    <section class="program">
+        <div class="join-flex">
+            <div class="section-divider"></div>
+            <h2 class="text-purple">How We Work</h2>
+        </div>
+
+        <div class="container program-flex">
+            <div class="card">
+                <h2>Access to Internet & tool</h2>
+                <p>We Provide internet support and essential digital tools to help women connect, learn and expand their
+                    Impact</p>
+            </div>
+
+            <div class="card">
+                <h2>Training & Mentorship</h2>
+                <p>We offer guidance, resources, and mentorship to help women grow their leadership, advocacy, and
+                    innovation skills</p>
+            </div>
+
+            <div class="card">
+                <h2>Funding & Sponsorship for Project</h2>
+                <p>We provide funding and sponsorships for women to support their community-driven initiatives</p>
+            </div>
+
+            <div class="card">
+                <h2>Recruitment & Talent Matching</h2>
+                <p>We help organizations find passionate women for social impact roles and connect women to meaningful
+                    opportunities</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Form-->
+    <div class="showcase">
+        <div class="container grid">
+            <div class="showcase-text">
+                <h1>Stay Updated</h1>
+                <p>Stay updated on how we're empowering women with digital tools</p>
+            </div>
+
+            <div class="showcase-form card">
+                <div id="message" style="display: none;margin-top: 0px;"></div>
+                <h2 class="text-blue">Subscribe To our Newsletter</h2>
+                <form id="newsletter-form" method="post">
+                    {% csrf_token %}
+                    <div class="form-control">
+                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="email" id="email" name="name" placeholder="Email" required>
+                    </div>
+
+                    <input type="submit" value="Subscribe" class="btn btn-primary ">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--message container-->
+    
+    
+    <!--Home-sections-Volunteer/partner-->
+    <div class="sections-container">
+        <div class="home-volunteer-section">
+            <div class="home-volunteer-content">
+                <i class="fas fa-heart"></i>
+                <div id="volunteer-message" style="display: none;"></div>
+                
+                <h2>Volunteer</h2>
+                <p>Volunteers are critical to the mission and growth of SheInternet. Much of our success is attributed
+                    to
+                    the countless hours contributed by our volunteers</p>
+                <button class="volunteer-button" onclick="openForm()"><i class="fas fa-heart"></i>Volunteer</button>
+            </div>
+        </div>
+        <div id="partner-message" style="display: none;"></div>
+        <div class="home-partners-section">
+            <div class="home-partners-content">
+                <i class="fas fa-handshake"></i>
+                
+                <h2>Partners</h2>
+                <p>Partner With SheInternet as we provide internet access and education across Africa through a series
+                    of programs targetting the women above 18 years</p>
+                <button id="openFormBtn">Become a Partner</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Partner Form-->
+    <div id="partnerForm" class="form-overlay">
+        <div class="form-content">
+            <span class="close-btn"><i class="fas fa-times"></i></span>
+            <h2 class="text-purple">Partner With Us</h2>
+            <form method="post" class="partner_form" action="" id="partnerFormFields">
+                
+                {% csrf_token %}
+                <label for="name">Name:</label>
+                <input type="text" id="pname" name="pname" placeholder="Full Name" required>
+                <label for="organization">Organization:</label>
+                <input type="text" id="porganization" name="organization" required>
+                <label for="email">Email:</label>
+                <input type="email" id="pemail" name="pemail" required>
+                <label for="textarea">Message</label>
+                <textarea name="message" id="pmessage" rows="4" required></textarea><br>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    
+    
+
+    
+    <!--Volunteer form-->
+   
+    <div class="form-popup" id="volunteerForm">
+        <div class="form-container">
+            <div class="flex-close">
+                <span class="close-btn times" onclick="closeForm()">&times;</span>
+                <h2 class="text-purple">Sign Up to Volunteer</h2>
+            </div>
+            <form id="volunteer-form" method="post" action="">
+                
+                {% csrf_token %}
+                <label for="name">Name:</label>
+                <input type="text" id="lname" name="name" placeholder="Full Name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="lphone" name="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="lemail" name="email" required>
+
+                <!--Contribution Type-->
+                <div class="form-group">
+                    <label>How Would you like to contribute <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label><input type="radio" id="mentoring" name="contribution" value="Mentoring women">Mentoring
+                            women</label>
+                        <label><input type="radio" id="marketing" name="contribution"
+                                value="Supporting Programs">Supporting Programs</label>
+                        <label><input type="radio" id="marketing" name="contribution"
+                                value="Marketing">Marketing</label>
+                        <label> <input type="radio" id="training" name="contribution" value="Hosting Training">Hosting
+                            Training</label>
+                        <label> <input type="radio" id="consultation" name="contribution"
+                                value="Provide one-time consultations">Provide one-time consultations</label>
+                        <label><input type="radio" id="other-text" name="contribution" value="other">Other: <input
+                                type="text" name="contribution"></label>
+                    </div>
+                </div>
+
+                <!--Commitment Time-->
+                <div class="form-group">
+                    <label>How much time can you commit? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="time_commitment" value="A few hours per month">A few hours per
+                            month</label>
+                        <label><input type="radio" name="time_commitment" value="Weekly commitment">Weekly
+                            commitment</label>
+                        <label> <input type="radio" name="time_commitment"
+                                value="one-time/short-term support">one-time/short-term support</label>
+                    </div>
+                </div>
+
+                <!--Message-->
+                <label for="message">Kindly tell us why you want to volunteer with us (optional)</label>
+                <textarea name="message" id="message" rows="4"></textarea>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Join Our Community-->
+    <div class="joinform-popup" id="joinForm">
+        <div class="form-container">
+            <div class="flex-close">
+                <span class="close-btn times" onclick="closeJoinForm()">&times;</span>
+                <h2 class="text-purple">Join Our Community</h2>
+            </div>
+            <form id="sheinternet-form" class="sheinternet-form" method="POST">
+                <div id="sheinternet-message" class="sheinternet-message" style="display: none;"></div>
+                {% csrf_token %}
+                <label for="name">Full Name:</label>
+                <input type="text" id="fname" name="name" placeholder="Full Name" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="femail" name="email" required>
+            
+                <label for="country">Country of Residence:</label>
+                <input type="text" id="country" name="country" required>  <!-- Updated id to "country" -->
+            
+                <!--What best describes you-->
+                <div class="form-group">
+                    <label>What best describes you? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="description" value="Nonprofit founder/Leader">Nonprofit founder/Leader</label>
+                        <label><input type="radio" name="description" value="Community Organizer/Advocate">Community Organizer/Advocate</label>
+                        <label><input type="radio" name="description" value="Educator">Educator</label>
+                        <label><input type="radio" name="description" value="Social Worker">Social Worker (Health Worker nonprofit or NGO worker etc)</label>
+                        <label><input type="radio" name="description" value="Social Entrepreneur">Social Entrepreneur</label>
+                        <label><input type="radio" name="description" value="Aspiring Changemaker">Aspiring Changemaker</label>
+                        <label><input type="radio" name="description" value="other">Other: <input type="text" name="description"></label>
+                    </div>
+                </div>
+            
+                <!--What type of support are you most interested in-->
+                <div class="form-group">
+                    <label>What type of support are you most interested in? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="interested" value="Internet access & digital Tools">Internet access & digital Tools</label>
+                        <label><input type="radio" name="interested" value="Mentorship">Mentorship</label>
+                        <label><input type="radio" name="interested" value="Funding opportunities">Funding opportunities</label>
+                        <label><input type="radio" name="interested" value="Networking & Collaboration">Networking & Collaboration</label>
+                        <label><input type="radio" name="interested" value="Job or Talent matching">Job or Talent matching</label>
+                        <label><input type="radio" name="interested" value="other">Other: <input type="text" name="interested"></label>
+                    </div>
+                </div>
+            
+                <!--How did you hear about SheInternet-->
+                <div class="form-group">
+                    <label>How did you hear about SheInternet? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="about" value="Social media">Social Media</label>
+                        <label><input type="radio" name="about" value="Website">Website</label>
+                        <label><input type="radio" name="about" value="Referral">Referral</label>
+                        <label><input type="radio" name="about" value="Event">Event</label>
+                        <label><input type="radio" name="about" value="other">Other: <input type="text" name="about"></label>
+                    </div>
+                </div>
+            
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+            
+            
+        </div>
+    </div>
+
+    <!--Join Our Team Section-->
+    <div class="join-team-section">
+        <div class="join-team-content">
+            <div class="join-flex">
+                <div class="section-divider"></div>
+                <h3>Join Our Team</h3>
+            </div>
+            <p>We are always looking for passionate individuals to contribute to our mission. If you're interested in
+                making an impact, and to work with a dedicated group of people, then join us today</p>
+                <a href="https://forms.gle/SRsDz4ENifTdnX5D6" target="_blank">
+                    <button class="join-button">
+                        <i class="fas fa-arrow-right"></i> Join Our Team
+                    </button>
+                </a>
+        </div>
+    </div>
+
+
+    
+
+
+    {% endblock content %}
+
+    

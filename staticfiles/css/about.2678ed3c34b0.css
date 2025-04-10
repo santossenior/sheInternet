@@ -1,0 +1,729 @@
+.about-container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.about-section {
+    margin-bottom: 30px;
+}
+
+.about-us h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about-us p {
+    line-height: 2rem;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.mission-vison {
+    margin-bottom: 40px;
+}
+
+.mission-vison .container-mv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.mission-vison h3 {
+    margin: 10px 0;
+}
+
+.support-program {
+    margin-bottom: 40px;
+}
+
+.program .support {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/*Core Values Section*/
+.core-values-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    background-color: #35424a;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.core-values-section>div {
+    margin-bottom: 20px;
+}
+
+.core-values-section h3 {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.core-values-section h3 i {
+    margin-right: 10px;
+}
+
+.core-values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.core-values-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 3px 10px;
+    border: 1px solid #bb9ac9;
+}
+
+.core-values-list li i {
+    margin-right: 5px;
+}
+
+.core-values-list::before {
+    content: "\2022";
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*board of directors*/
+.board-section {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.6;
+    color: #333;
+}
+
+.board-section h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.board-section p {
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Outline*/
+.team-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f0f0f5;
+}
+
+.team-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.team-content h2 {
+    font-size: 36px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.team-member {
+    margin: 10px;
+    padding: 15px 25px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-member a {
+    color: #007bff;
+    font-weight: 500;
+}
+
+.team-member a:hover {
+    text-decoration: underline;
+}
+
+
+/* Our Program */
+.program-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.program-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.program-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.program-details {
+    flex: 1 1 60%;
+    padding: 20px;
+}
+
+.program-details h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.program-details p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px
+}
+
+.program-details ul {
+    list-style-type: disc;
+    padding: 0;
+}
+
+.program-details ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.program-details ul li::before {
+    content: "";
+    color: #007bff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+/* Eligibility Criterial*/
+.eligibility {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.eligibility .eligibility-container {
+    background-color: #fff;
+    color: #333;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.eligibility-container h2 {
+    font-size: 22px;
+    background-color: #bb9ac9;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.eligibility p {
+    line-height: 2rem;
+    margin-bottom: 10px;
+}
+
+.eligibility-container ul {
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.eligibility-container ul li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    list-style-type: disc;
+}
+
+.eligibility ul li span {
+    font-weight: bold;
+}
+
+.application-dates {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #35424a;
+    font-weight: bold;
+}
+
+.eligibility a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/*How it works*/
+.how-it-works-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #e0eafc;
+}
+
+.how-it-works-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.how-it-works-content h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.steps-list {
+    list-style: none;
+    padding: 0;
+}
+
+.steps-list li {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.steps-list h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.steps-list li p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.apply-button {
+    background-color: #91a9d6;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.apply-button:hover {
+    transform: scale(0.98);
+}
+
+.apply-button a {
+    color: #fff;
+}
+
+/*Get Involved Page*/
+.get-involved-container,
+.volunteer-container,
+.sponsor-container,
+.community-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.get-involved-section h3,
+.volunteer-section h3,
+.sponsor-section h3,
+.community-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.get-involved-section p,
+.volunteer-section p,
+.sponsor-section p,
+.community-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#openFormBtn {
+    background: #35424a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.form-overlay.active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.form-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-200px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.form-overlay.active .form-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-content form input,
+form text area {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+}
+
+form input:focus,
+textarea:focus {
+    outline: none;
+}
+
+.form-content form button {
+    background-color: #bb9ac9;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.sponsor-btn {
+    background: #35424a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.white {
+    color: #fff;
+}
+
+.involved-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.open-form-btn {
+    background-color: #35424a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.open-form-btn:hover,
+.sponsor-btn:hover,
+#openFormBtn:hover {
+    transform: scale(0.98);
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.joinform-popup {
+    z-index: 1000;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px;
+    max-height: 80vh;
+    width: 40%;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.3s;
+}
+
+.form-container form input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #bb9ac9;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #996ed9;
+}
+
+.times {
+    right: 15px;
+    font-size: 28px;
+    display: flex;
+    color: red;
+    cursor: pointer;
+}
+
+#partnerForm .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.form-popup .flex-close {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.joinform-popup .flex-close {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    background: #ffe6e6;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    text-align: left;
+    margin-right: 7px;
+}
+
+.required {
+    color: red;
+}
+
+.margin-top {
+    margin-top: 30px;
+}
+
+/* Animation*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-0);
+    }
+}
+
+@media(max-width: 768px) {
+    .team-content h2 {
+        font-family: 30px;
+    }
+
+    .team-content p {
+        font-size: 16px;
+    }
+
+    .about-section p {
+        font-size: 16px;
+    }
+
+    .how-it-works-content h2 {
+        font-size: 30px;
+    }
+
+    .steps-list li h3 {
+        font-size: 20px;
+    }
+
+    .steps-list li p {
+        font-size: 16px;
+    }
+
+    .program-section {
+        flex-direction: column;
+    }
+
+    .program-image,
+    .program-details {
+        flex: 1 1 100%;
+    }
+
+    .mission-vison .container-mv {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .program .support {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .board-section p {
+        font-size: 16px;
+    }
+
+    .form-content {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .radio-group label {
+        font-size: 12px;
+    }
+
+    .radio-group input[type="radio"] {
+        width: 14px;
+        height: 14px;
+    }
+
+    .get-involved-container,
+    .volunteer-container,
+    .sponsor-container,
+    .community-container {
+        text-align: center;
+    }
+
+    .involved-flex {
+        flex-direction: column;
+    }
+
+    .get-involved-section p,
+    .volunteer-section p,
+    .sponsor-section p,
+    .community-section p {
+        text-align: center;
+    }
+}
+
+
+@media(max-width: 600px) {
+    .form-popup h2 {
+        font-size: 16px;
+    }
+
+    .core-values-section h3 {
+        font-size: 20px;
+    }
+
+    .core-values-list li {
+        font-size: 16px;
+    }
+}
