@@ -1,5 +1,4 @@
-const CommunityForm = document.getElementById('joinForm');
-console.log("This is the community", CommunityForm);
+
 
 // Function to close the form
 

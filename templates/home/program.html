@@ -12,6 +12,7 @@
     
 
     <!--Our Program-->
+    <div id="sheinternet-message" class="sheinternet-message" style="display: none;"></div>
     <div class="container">
         <div class="program-section">
             <div class="program-image">
@@ -91,6 +92,68 @@
                 </li>
             </ol>
             <button class="apply-button"><a href="https://forms.gle/74MTUA2cskZLbQdY6" target="_blank">Apply Now</a></button>
+        </div>
+    </div>
+    <div id="sheinternet-message" class="sheinternet-message" style="display: none;"></div>
+    <div class="joinform-popup" id="joinForm">
+        <div class="form-container">
+            <div class="flex-close">
+                <span class="close-btn times" onclick="closeJoinForm()">&times;</span>
+                <h2 class="text-purple">Joins Our Community</h2>
+            </div>
+            <form id="sheinternet-form" class="sheinternet-form" method="POST">
+                
+                {% csrf_token %}
+                <label for="name">Full Name:</label>
+                <input type="text" id="fname" name="name" placeholder="Full Name" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="femail" name="email" required>
+            
+                <label for="country">Country of Residence:</label>
+                <input type="text" id="country" name="country" required>  <!-- Updated id to "country" -->
+            
+                <!--What best describes you-->
+                <div class="form-group">
+                    <label>What best describes you? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="description" value="Nonprofit founder/Leader">Nonprofit founder/Leader</label>
+                        <label><input type="radio" name="description" value="Community Organizer/Advocate">Community Organizer/Advocate</label>
+                        <label><input type="radio" name="description" value="Educator">Educator</label>
+                        <label><input type="radio" name="description" value="Social Worker">Social Worker (Health Worker nonprofit or NGO worker etc)</label>
+                        <label><input type="radio" name="description" value="Social Entrepreneur">Social Entrepreneur</label>
+                        <label><input type="radio" name="description" value="Aspiring Changemaker">Aspiring Changemaker</label>
+                        <label><input type="radio" name="description" value="other">Other: <input type="text" name="description"></label>
+                    </div>
+                </div>
+            
+                <!--What type of support are you most interested in-->
+                <div class="form-group">
+                    <label>What type of support are you most interested in? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="interested" value="Internet access & digital Tools">Internet access & digital Tools</label>
+                        <label><input type="radio" name="interested" value="Mentorship">Mentorship</label>
+                        <label><input type="radio" name="interested" value="Funding opportunities">Funding opportunities</label>
+                        <label><input type="radio" name="interested" value="Networking & Collaboration">Networking & Collaboration</label>
+                        <label><input type="radio" name="interested" value="Job or Talent matching">Job or Talent matching</label>
+                        <label><input type="radio" name="interested" value="other">Other: <input type="text" name="interested"></label>
+                    </div>
+                </div>
+            
+                <!--How did you hear about SheInternet-->
+                <div class="form-group">
+                    <label>How did you hear about SheInternet? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="about" value="Social media">Social Media</label>
+                        <label><input type="radio" name="about" value="Website">Website</label>
+                        <label><input type="radio" name="about" value="Referral">Referral</label>
+                        <label><input type="radio" name="about" value="Event">Event</label>
+                        <label><input type="radio" name="about" value="other">Other: <input type="text" name="about"></label>
+                    </div>
+                </div>
+            
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
         </div>
     </div>
 
